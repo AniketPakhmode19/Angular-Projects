@@ -1,0 +1,31 @@
+/* Styles for the container */
+.container {
+  width: 80%;
+  margin: 20px auto;
+  margin-top: 350px;
+  text-align: center;
+}
+
+/* Styles for the heading */
+h1 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Styles for the button */
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #4caf50;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #388e3c;
+}

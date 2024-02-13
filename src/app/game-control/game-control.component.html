@@ -1,0 +1,19 @@
+<div class="box">
+    <div class="even">
+      <app-even [evenCount]="evenCount"></app-even>
+    </div>
+    
+    <div class="odd">
+      <app-odd [oddCount]="oddCount"></app-odd>
+    </div>
+    
+    <div class="count">
+      <p class="info">{{ lastEmittedNumber }}</p>
+    </div>
+    
+    <div class="container" style="align-items: center">
+      <button (click)="startGame()">Start</button>
+      <button (click)="stopGame()">Stop</button>
+      <button (click)="restartGame()">Restart</button>
+    </div>
+  </div>

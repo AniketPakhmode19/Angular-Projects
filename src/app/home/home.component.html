@@ -1,0 +1,18 @@
+<mat-toolbar color="primary">
+  <div>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" [matMenuTriggerFor]="menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>My Assignments</span>
+    <button mat-button [matMenuTriggerFor]="menu"></button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item (click)="navigateTo('game-control')">Game Control</button>
+          <button mat-menu-item (click)="navigateTo('angular-material')">Angular Material</button>
+          <button mat-menu-item (click)="navigateTo('introduction')">Introduction</button>
+          <button mat-menu-item (click)="navigateTo('parent-child')">Parent-Child</button>
+        </mat-menu>
+  </div>
+  <span class="example-spacer"></span>
+  <button mat-flat-button color="warn" (click)="logout()">Log Out</button>
+</mat-toolbar>
+

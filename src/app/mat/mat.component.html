@@ -1,0 +1,228 @@
+<!-- buttons -->
+<div style="display: flex; gap: 10px">
+    <button mat-button>Hello World</button>
+    <button mat-raised-button>Hello World</button>
+    <button mat-flat-button>Hello World</button>
+    <button mat-stroked-button disabled>Hello World</button>
+</div>
+
+<br>
+<br>
+
+<!-- Fab Icons -->
+<div style="display: flex; gap: 30px">
+    <button mat-icon-button>Icon</button>
+    <button mat-fab>Icon</button>
+    <button mat-mini-fab>Icon</button>
+</div>
+
+<br>
+<br>
+
+<!-- Button Colous -->
+<div style="display: flex; gap: 10px">
+    <button mat-button color="primary">Primary</button>
+    <button mat-raised-button color="accent">Accent</button>
+    <button mat-flat-button color="warn">Warn</button>
+    <button mat-stroked-button disabled>Disable</button>
+
+    <!-- Disabble Ripple Efect -->
+    <button disabledRipple-mat-button>DisableReple</button>                 
+</div>
+
+<br>
+<br>
+
+<!-- Toggle Button -->
+<div>
+    <mat-button-toggle #toggleButton checked>Toggle</mat-button-toggle>
+    {{toggleButton.checked}}
+</div>
+
+<br>
+<br>
+
+<!-- Toggle Multiple Buttons -->
+<div>
+    <!-- add multiple at the end to select all toggle button at a time -->
+    <mat-button-toggle-group #toggleGroup="matButtonToggleGroup">
+        <mat-button-toggle value="angular">Angular</mat-button-toggle>
+        <mat-button-toggle value="resct">React</mat-button-toggle>
+        <mat-button-toggle value="vue">Vue</mat-button-toggle>
+    </mat-button-toggle-group>
+    {{toggleGroup.value}}
+</div>
+
+<br>
+<br>
+
+<!-- Card Module -->
+<mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>Shiba Inu</mat-card-title>
+      <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+      <p>
+        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+        bred for hunting.
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button align="end">LIKE</button>
+      <button mat-button align="end">SHARE</button>
+    </mat-card-actions>
+ </mat-card>
+
+  <br>
+  <br>
+  
+  <!-- CheckBox -->
+  <mat-checkbox>Subscribe</mat-checkbox>
+  <br>
+  <mat-checkbox labelPosition="before">Comment</mat-checkbox>
+  <br>
+  <mat-checkbox color="primary">Subscribe</mat-checkbox>
+  <br>
+  <mat-checkbox color="warn">Subscribe</mat-checkbox>
+
+  <br>
+  <br>
+
+  <!-- Radio Buttons -->
+  <mat-radio-group>
+    <mat-radio-button value="angular" color="primary">Angular</mat-radio-button>
+    <mat-radio-button value="react" color="warn">React</mat-radio-button>
+    <mat-radio-button value="vew" color="accent">Vew</mat-radio-button>
+  </mat-radio-group> 
+
+  <br>
+  <br>
+
+  <!-- Input Control -->
+  <mat-form-field floatLabel="auto" hideRequiredMarker [appearance]="'outline'" color="warn"> 
+    <!-- <floatLabel="auto","always","never"> --><!-- [apperance]="'_____'" can be legecy(default), standard, fill and outline] -->
+    <mat-label>Name</mat-label>
+    <input matInput required>
+    <mat-hint align="end">Min 5 characters</mat-hint>
+  </mat-form-field>
+
+  <br>
+  <br>
+
+  <!-- List Example 1-->
+  <mat-list dense> <!-- "dense" reduce the size of the font-->
+      <mat-list-item>Item 1</mat-list-item> 
+      <mat-list-item>Item 2</mat-list-item> 
+      <mat-list-item>Item 3</mat-list-item>   
+  </mat-list>
+
+  <br>
+
+    <!-- List Example 2-->
+  <mat-nav-list>
+    <a mat-list-item="#">Home</a>
+    <a mat-list-item="#">Abour</a>
+    <a mat-list-item="#">Services</a>
+  </mat-nav-list>
+
+  <br>
+  <br>
+
+  <!-- Icon [material.io/tools/icons in web page]-->
+  <div>
+    <mat-icon color="warn">cancel</mat-icon>
+    <mat-icon color="primary">home</mat-icon>
+    <mat-icon color="accent">download</mat-icon>
+  </div>
+
+  <br>
+  <br>
+
+  <!-- Horizontal Stepper -->
+  <mat-horizontal-stepper linear>
+    <mat-step label="shipping address" completed="true">
+        <p>Shipping Address Details</p>
+    </mat-step>
+    <mat-step label="billing address"  completed="false" optional>
+        <p>Billing Address Details</p>
+        <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+        </div>
+    </mat-step>
+    <mat-step label="order detail"  completed="false">
+        <p>Order Details</p>
+    </mat-step>
+  </mat-horizontal-stepper>
+
+  <br>
+  <br>
+
+  <!-- Vertocal Stepper -->
+  <mat-vertical-stepper linear>
+    <mat-step label="shipping address" completed="true">
+        <p>Shipping Address Details</p>
+    </mat-step>
+    <mat-step label="billing address"  completed="false" optional>
+        <p>Billing Address Details</p>
+        <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+        </div>
+    </mat-step>
+    <mat-step label="order detail"  completed="false">
+        <p>Order Details</p>
+    </mat-step>
+  </mat-vertical-stepper>
+
+  <br>
+  <br>
+
+  <!-- Menu -->
+  <mat-menu #appMenu="matMenu" xPosition="after" yPosition="above"><!-- Templete Referance Verialble "#appMenu"-->
+    <button mat-menu-item [matMenuTriggerFor]="subMenu">FontEnd</button>
+    <button mat-menu-item>BackEnd</button>
+  </mat-menu>
+  <button mat-flat-button [matMenuTriggerFor]="appMenu">Manu</button>
+  <!-- Sub-Menu -->
+  <mat-menu #subMenu="matMenu">
+    <button mat-menu-item>Angular</button>
+    <button mat-menu-item>React</button>
+    <button mat-menu-item>Vew</button>
+  </mat-menu>
+  <!-- Lazy-Menu -->
+  <mat-menu #lazyMenu="matMenu">
+    <ng-template matMenuContent let-name="name" let-hobby="hobby">
+        <button mat-menu-item>Setting</button>
+        <button mat-menu-item>Hobbie is {{hobby}}</button>
+        <button mat-menu-item>Log Out {{name}}</button>
+    </ng-template>
+  </mat-menu>
+  <button 
+  mat-raised-button 
+  [matMenuTriggerData]="{name:'Aniket', hobby:'videogame'}" 
+  [matMenuTriggerFor]="lazyMenu">Aniket
+  </button>
+  <button 
+  mat-raised-button 
+  [matMenuTriggerData]="{name:'Parag', hobby:'cricket'}" 
+  [matMenuTriggerFor]="lazyMenu">Parag
+  </button>
+
+  <br>
+  <br>
+
+  <!-- Sliders -->
+  <div class="slide">
+      <mat-slide-toggle>Slide me!</mat-slide-toggle>
+  </div>
+     
+
+
+
+  
+        

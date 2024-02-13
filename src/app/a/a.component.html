@@ -1,0 +1,11 @@
+<div class="container1">
+    <h3>A Component [Parent] !</h3>
+
+    <p>Displaying the value of Child Component B : {{my_child}}</p>
+
+    <input #my_input type="text" placeholder="enter the value">
+
+    <button (click)="passInput(my_input.value)">Component A</button>
+
+    <app-b [pass_parent]="my_parent" (myOutput)="receiveInput($event)"></app-b>
+</div>

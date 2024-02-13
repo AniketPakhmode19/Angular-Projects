@@ -1,0 +1,66 @@
+/* Styles for the box container */
+.box {
+  width: 300px;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 180px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for even count section */
+.even {
+  background-color: #64b5f6;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+/* Styles for odd count section */
+.odd {
+  background-color: #ff8a65;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+/* Styles for last emitted number section */
+.count {
+  background-color: #81c784;
+  padding: 15px;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Styles for container buttons */
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Button styles */
+button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ccc;
+}
